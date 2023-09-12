@@ -1,0 +1,18 @@
+# sphere_cubed_grid_points_commands.txt
+#
+# Usage:
+#  gnuplot < sphere_cubed_grid_points_commands.txt
+#
+set term png
+set output "sphere_cubed_grid_points.png"
+set xlabel "<--- X --->"
+set ylabel "<--- Y --->"
+set zlabel "<--- Z --->"
+set title "sphere_cubed_grid_points"
+set grid
+set key off
+set style data points
+set timestamp
+set view equal xyz
+splot "sphere_cubed_grid_points_nodes.txt" with points pt 7 lt 0
+quit
